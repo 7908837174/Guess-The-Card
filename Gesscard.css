@@ -1,0 +1,117 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, rgba(29, 53, 87, 1), rgba(249, 100, 100, 1)); /* Gradient background */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    overflow: hidden;
+}
+
+.game-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    animation: fadeIn 1s ease-out;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 30px;
+    color: #ff5c8d;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    animation: bounce 1s infinite alternate;
+}
+
+.card {
+    width: 120px;
+    height: 180px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    border-radius: 12px;
+    background-image: url('https://example.com/your-card-back.jpg'); /* Replace with your card back image */
+    background-size: cover;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.card.revealed {
+    background-image: none;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+    transform: rotateY(360deg);
+}
+
+.card-text {
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.3s;
+    animation: glow 1.5s infinite alternate;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+.result {
+    margin-top: 30px;
+}
+
+#message {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff5c8d;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); }
+    100% { box-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+}
