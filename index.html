@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Card Game</title>
+    <link rel="stylesheet" href="Gesscard.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Guess the Card</h1>
+        <div class="cards">
+            <div class="card" id="card1"><span class="card-text">?</span></div>
+            <div class="card" id="card2"><span class="card-text">?</span></div>
+        </div>
+        <div class="buttons">
+            <button onclick="guess('higher')">Higher</button>
+            <button onclick="guess('lower')">Lower</button>
+        </div>
+        <div class="result">
+            <p id="message">Make a guess!</p>
+        </div>
+    </div>
+
+    <script src="Gesscard.js"></script>
+</body>
+</html>
